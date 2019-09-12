@@ -1,0 +1,42 @@
+package capaDAO;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import jdbc.ConexionJdbc;
+import jdbc.UtilesJdbc;
+import excepciones.BusinessException;
+import pojos.Ciclista;
+
+public class DAOCiclista {
+	public static Ciclista getCiclista(int dorsal) throws BusinessException{
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		Ciclista c = null;
+		try {
+			String sql = "SELECT * FROM ciclista WHERE dorsal = ?";
+			pstm = ConexionJdbc.getConnection().prepareStatement(sql);
+			pstm.setInt(1, dorsal);
+
+			rs = pstm.executeQuery();
+			if (rs.first()){
+				c = new Ciclista(dorsal, rs.getString("nombre"), rs.getInt("edad"),rs.getString("nomeq"));
+			}
+			return c;
+		} catch (SQLException e) {
+			Logger.getLogger(DAOCiclista.class.getName()).log(Level.SEVERE, "Error de Query",e);
+			throw new BusinessException("Error en operación con la BD.");
+		} finally {
+			//No hace falta cerrar el rs. Si cerramos un Statement el ResultSet que depende de el 
+			//se cierra automáticamente
+			UtilesJdbc.cerrar(pstm);
+		}
+	}
+}

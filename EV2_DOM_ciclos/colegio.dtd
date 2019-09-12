@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT colegio (grupo+)>
+<!ELEMENT grupo (nombre,alumno+)>
+<!ATTLIST grupo codigo CDATA "">
+<!ATTLIST grupo maxalumnos CDATA "">
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT alumno (expediente, nombrealu, fechaingreso)>
+<!ELEMENT expediente (#PCDATA)>
+<!ELEMENT nombrealu (#PCDATA)>
+<!ELEMENT fechaingreso (#PCDATA)>

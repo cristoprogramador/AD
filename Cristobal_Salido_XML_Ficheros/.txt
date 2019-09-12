@@ -1,0 +1,9 @@
+.classpath - Tamaño: 301 bytes
+.project - Tamaño: 405 bytes
+.txt - Tamaño: 0 bytes
+a.txt - Tamaño: 0 bytes
+Alumnos.txt - Tamaño: 164 bytes
+cdinfo.dtd - Tamaño: 756 bytes
+cdinfo.xml - Tamaño: 5824 bytes
+src.txt - Tamaño: 29 bytes
+src.txt.txt - Tamaño: 0 bytes

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-feb-2019 0:48:52 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="pojo.Pertenece" table="pertenece" catalog="musicaconclavesajenas">
+        <composite-id name="id" class="pojo.PerteneceId">
+            <key-property name="dni" type="string">
+                <column name="dni" length="10" />
+            </key-property>
+            <key-property name="cod" type="int">
+                <column name="cod" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="grupo" class="pojo.Grupo" update="false" insert="false" fetch="select">
+            <column name="cod" not-null="true" />
+        </many-to-one>
+        <many-to-one name="artista" class="pojo.Artista" update="false" insert="false" fetch="select">
+            <column name="dni" length="10" not-null="true" />
+        </many-to-one>
+        <property name="funcion" type="string">
+            <column name="funcion" length="15" />
+        </property>
+    </class>
+</hibernate-mapping>

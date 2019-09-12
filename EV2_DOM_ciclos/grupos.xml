@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE colegio SYSTEM "colegio.dtd">
+<colegio>
+	<grupo codigo ="1DAM" maxalumnos="24">
+		<nombre>1º DAM</nombre>
+		<alumno>
+			<expediente>6601</expediente>
+			<nombrealu>David Gonzalez</nombrealu>
+			<fechaingreso>01/09/2012</fechaingreso>
+		</alumno>
+		<alumno>
+			<expediente>6602</expediente>
+			<nombrealu>Pedro Moreno</nombrealu>
+			<fechaingreso>01/09/2012</fechaingreso>
+		</alumno>
+		<alumno>
+			<expediente>6603</expediente>
+			<nombrealu>Juliana Gomez</nombrealu>
+			<fechaingreso>01/09/2012</fechaingreso>
+		</alumno>
+	</grupo>
+
+	<grupo codigo ="2DAM" maxalumnos="24">
+		<nombre>2º DAM</nombre>
+		<alumno>
+			<expediente>6605</expediente>
+			<nombrealu>Fernando Flores</nombrealu>
+			<fechaingreso>01/03/2012</fechaingreso>
+		</alumno>
+		<alumno>
+			<expediente>6606</expediente>
+			<nombrealu>David Mancebo</nombrealu>
+			<fechaingreso>01/05/2012</fechaingreso>
+		</alumno>
+		<alumno>
+			<expediente>6607</expediente>
+			<nombrealu>Laura Solsona</nombrealu>
+			<fechaingreso>01/06/2012</fechaingreso>
+		</alumno>
+	</grupo>
+</colegio>
+	
+		

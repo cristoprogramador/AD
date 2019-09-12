@@ -1,0 +1,32 @@
+package interfaz;
+import java.util.Scanner;
+
+import jdbc.ConexionJdbc;
+import capaDAO.DAOCiclista;
+import excepciones.BusinessException;
+import pojos.Ciclista;
+public class ConsultarDatosUnCiclista {
+	public static void main(String[] args) {
+		Scanner tec = new Scanner(System.in);
+		System.out.println("Introduce dorsal de ciclista: ");
+		int dorsal = tec.nextInt();
+		ConexionJdbc conJdbc = null;
+		try{
+			conJdbc = new ConexionJdbc("configuracion//propiedadesciclismo.txt");
+			conJdbc.conectar();
+			
+			Ciclista c = DAOCiclista.getCiclista(dorsal);
+			if(c==null) System.out.println("No hay ningún ciclista con ese dorsal");
+			else {
+				System.out.println("Los datos del ciclista son: ");
+				System.out.println("Nombre: " + c.getNombre());
+				System.out.println("Edad: " + c.getEdad());
+				System.out.println("Equipo: " + c.getNomeq());
+			}
+		} catch (BusinessException e){
+			System.out.println("No se pudo hacer la consulta");
+		} finally{
+			conJdbc.desconectar();
+		}
+	}
+}

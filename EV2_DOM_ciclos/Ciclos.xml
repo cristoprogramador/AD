@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ofertaformativa SYSTEM "ofertaformativa.dtd">
+<ofertaformativa>
+	<familia>
+		<nombre>Informatica y comunicaciones</nombre>
+		<ciclo grado ="medio">
+			<titulo>Desarrollo de aplicaciones multiplataforma</titulo>
+			<curso numero ="1">
+				<modulo horas="100">Lenguajes de marcas y sistemas de gestión de información.</modulo>
+				<modulo horas="160">Sistemas informáticos.</modulo>
+				<modulo horas="160">Bases de Datos.</modulo>
+				<modulo horas="256">Programación.</modulo>
+				<modulo horas="96">Entornos de desarrollo.</modulo>
+				<modulo horas="96">Formación y Orientación Laboral.</modulo>
+			</curso>
+			<curso numero="2">
+				<modulo horas="120">Acceso a datos.</modulo>
+				<modulo horas="120">Desarrollo de interfaces.</modulo>
+				<modulo horas="100">Programación multimedia y dispositivos móviles.</modulo>
+				<modulo horas="60">Programación de servicios y procesos.</modulo>
+				<modulo horas="100">Sistemas de gestión empresarial.</modulo>
+				<modulo horas="60">Empresa e iniciativa emprendedora.</modulo>
+				<modulo horas="40">Proyecto de Desarrollo de aplicaciones multiplataforma.</modulo>
+				<modulo horas="400">Formación en Centros de Trabajo.</modulo>
+			</curso>
+		</ciclo>
+	</familia>
+	<familia>
+		<nombre>Imagen y sonido</nombre>
+		<ciclo grado="superior">
+			<titulo>Sonido para audiovisuales y espectaculos</titulo>
+			<curso numero="1">
+				<modulo horas="96">Planificación de proyectos de sonido.</modulo>
+				<modulo horas="192">Instalaciones de sonido.</modulo>
+				<modulo horas="224">Sonido para audiovisuales.</modulo>
+				<modulo horas="128">Electroacústica.</modulo>
+				<modulo horas="128">Comunicación y expresión sonora.</modulo>
+				<modulo horas="96">Formación y orientación laboral.</modulo>
+				<modulo horas="96">Horario reservado para el módulo impartido en inglés.</modulo>
+			</curso>
+			<curso numero="2">
+				<modulo horas="120">Control de sonido en directo.</modulo>
+				<modulo horas="160">Grabación en estudio.</modulo>
+				<modulo horas="80">Ajustes de sistemas de sonorización.</modulo>
+				<modulo horas="140">Postproducción de sonido.</modulo>
+				<modulo horas="60">Empresa e iniciativa emprendedora.</modulo>
+				<modulo horas="40">Proyecto de sonido para audiovisuales y espectáculos.</modulo>
+				<modulo horas="400">Formación en Centros de Trabajo. </modulo>
+			</curso>
+		</ciclo>
+	</familia>
+</ofertaformativa>

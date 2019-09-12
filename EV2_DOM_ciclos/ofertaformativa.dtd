@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT ofertaformativa (familia*)>
+<!ELEMENT familia (nombre,ciclo+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ciclo (titulo,curso+)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT curso (modulo+)>
+<!ELEMENT modulo (#PCDATA)>
+
+<!ATTLIST ciclo grado  ( medio | superior ) #REQUIRED>
+<!ATTLIST curso numero  ( 1 | 2 ) #REQUIRED>
+<!ATTLIST modulo horas CDATA "">
+	

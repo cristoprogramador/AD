@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-feb-2019 0:48:52 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="pojo.Grupo" table="grupo" catalog="musicaconclavesajenas">
+        <id name="cod" type="java.lang.Integer">
+            <column name="cod" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" not-null="true" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" />
+        </property>
+        <property name="pais" type="string">
+            <column name="pais" length="10" />
+        </property>
+        <set name="perteneces" table="pertenece" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cod" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Pertenece" />
+        </set>
+        <set name="clubs" table="club" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cod_gru" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Club" />
+        </set>
+        <set name="discos" table="disco" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cod_gru" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Disco" />
+        </set>
+    </class>
+</hibernate-mapping>

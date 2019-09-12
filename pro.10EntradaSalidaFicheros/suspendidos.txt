@@ -1,0 +1,10 @@
+3.0
+pepe
+4.0
+andres
+1.5
+jonas
+3.0
+juana
+4.0
+ana

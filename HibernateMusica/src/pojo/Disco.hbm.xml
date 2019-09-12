@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-feb-2019 0:48:52 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="pojo.Disco" table="disco" catalog="musicaconclavesajenas">
+        <id name="cod" type="java.lang.Integer">
+            <column name="cod" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="companyia" class="pojo.Companyia" fetch="select">
+            <column name="cod_comp" not-null="true" />
+        </many-to-one>
+        <many-to-one name="grupo" class="pojo.Grupo" fetch="select">
+            <column name="cod_gru" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" />
+        </property>
+        <set name="cancions" table="esta" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="cod" not-null="true" />
+            </key>
+            <many-to-many entity-name="pojo.Cancion">
+                <column name="can" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

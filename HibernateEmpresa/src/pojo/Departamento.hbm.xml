@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31-ene-2019 22:49:54 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="pojo.Departamento" table="departamento" catalog="empresa">
+        <id name="numDep" type="int">
+            <column name="NumDep" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" />
+        </property>
+        <set name="empleadosForDepartamento" table="empleado" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="departamento" />
+            </key>
+            <one-to-many class="pojo.Empleado" />
+        </set>
+        <set name="empleadosForDirige" table="empleado" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dirige" unique="true" />
+            </key>
+            <one-to-many class="pojo.Empleado" />
+        </set>
+        <set name="proyectos" table="proyecto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="departamento" />
+            </key>
+            <one-to-many class="pojo.Proyecto" />
+        </set>
+    </class>
+</hibernate-mapping>

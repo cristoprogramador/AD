@@ -1,0 +1,5 @@
+# Propiedades para la conexion a base de datos ciclismo
+driverClassName=com.mysql.jdbc.Driver
+url=jdbc:mysql://192.168.2.16:3306/ciclismo
+username=root
+password=mysql

@@ -1,0 +1,41 @@
+package pojos;
+
+public class Ciclista {
+	private int dorsal;
+	private String nombre;
+	private int edad;
+	private String nomeq;
+	
+	public Ciclista(){
+	}
+	public Ciclista(int dorsal, String nombre, int edad, String nomeq){
+		this.dorsal = dorsal; 
+		this.nombre = nombre;
+		this.edad = edad;
+		this.nomeq = nomeq;
+	}
+	public int getDorsal() {
+		return dorsal;
+	}
+	public void setDorsal(int dorsal) {
+		this.dorsal = dorsal;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public String getNomeq() {
+		return nomeq;
+	}
+	public void setNomeq(String nomeq) {
+		this.nomeq = nomeq;
+	}
+}

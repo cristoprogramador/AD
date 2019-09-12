@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-feb-2019 0:48:52 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="pojo.Companyia" table="companyia" catalog="musicaconclavesajenas">
+        <id name="cod" type="java.lang.Integer">
+            <column name="cod" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" not-null="true" />
+        </property>
+        <property name="dir" type="string">
+            <column name="dir" length="30" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="15" />
+        </property>
+        <property name="tfno" type="string">
+            <column name="tfno" length="15" />
+        </property>
+        <set name="discos" table="disco" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cod_comp" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Disco" />
+        </set>
+    </class>
+</hibernate-mapping>

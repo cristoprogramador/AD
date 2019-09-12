@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-feb-2019 0:48:52 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="pojo.Artista" table="artista" catalog="musicaconclavesajenas">
+        <id name="dni" type="string">
+            <column name="dni" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="30" not-null="true" />
+        </property>
+        <set name="perteneces" table="pertenece" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dni" length="10" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Pertenece" />
+        </set>
+    </class>
+</hibernate-mapping>
